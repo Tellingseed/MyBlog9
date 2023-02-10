@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title> The family book </title>
+  </head>
+  <body>
+    <p> The family book</p>
+    <img id="imgsrc" src="https://i.postimg.cc/MGn9GJXw/family.jpg">
+    <br> <br>
+    <button onclick="next()">Next</button>
+    <br> <br>
+    <h3 id="text">Family Book</h3>
+    
+    <script>
+      var images = ["https://i.postimg.cc/MGn9GJXw/family.jpg","https://i.postimg.cc/qqyYvVbq/grandpa.jpg", "https://i.postimg.cc/wjMnFtMX/father.jpg" , "https://i.postimg.cc/5ymDKL83/bro.jpg", "https://i.postimg.cc/JnL6wtrd/sister.jpg", "https://i.postimg.cc/bw5W5zSK/mother.jpg"];
+      var names = ["Family Book","Ranbir Singh", "Diljeet Singh", "Rocky Singh", "Alia Singh", "Soni Singh"];
+      var ran = 1;
+      
+      function next(){ 
+        if (ran >= images.length) {
+          ran = 0;
+        }
+        document.getElementById("imgsrc").src = images[ran];
+        document.getElementById("text").innerHTML = names[ran];
+        ran++;
+      }
+    </script>
+  </body>
+</html>
